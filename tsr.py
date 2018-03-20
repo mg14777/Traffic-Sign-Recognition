@@ -95,12 +95,11 @@ def whiten_train_dataset(img):
     return img
 
 def mean_removal(img):
-    #for i in range(0,len(img)): 
-        for j in range(0,3) :
-            img_mean = np.mean(img[0][:,:,j])
-            img_std = np.std(img[0][:,:,j])
-            img[0][:,:,j] = (img[0][:,:,j]  - img_mean) / img_std
-    	return img
+    for j in range(0,3) :
+        img_mean = np.mean(img[0][:,:,j])
+        img_std = np.std(img[0][:,:,j])
+        img[0][:,:,j] = (img[0][:,:,j]  - img_mean) / img_std
+	return img
 
 def whiten_test_dataset(data):
     print("normalizing test images")
@@ -430,7 +429,7 @@ def main(_):
             summary_writer_validation.add_summary(tf.Summary(value=[ tf.Summary.Value(tag="Validation Accuracy", simple_value=validation_acc_avg),]), epoch)    
 	    summary_writer_validation.flush()
 	    #print('Epoch %d finished' % (epoch + 1))
-            #print('Evaluated Images so far for training: %d' % (evaluated_images))
+        #print('Evaluated Images so far for training: %d' % (evaluated_images))
         print('Total steps: %d' % step)
 
         # Testing
