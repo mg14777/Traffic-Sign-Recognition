@@ -3,13 +3,12 @@ Shallow network with combined pooling for fast traffic sign recognition (Zhang e
 
 ## Overview:
 A Deep Learning model that utilizes Convolutional Neural Network (CNN) along with dropout and multi scale features
-to identify traffic signs in images. The dataset used is the German Traffic Sign Dataset. The trained model achieves around 96% accuracy
-on the test set. Details given in report.pdf
+to identify traffic signs in images. The dataset used is the <a href="http://benchmark.ini.rub.de/?section=gtsrb&subsection=news">German Traffic Sign Dataset</a>. The trained model achieves around 96% accuracy on the test set. Details given in report.pdf
 
 ## Dependencies:
-Python
-Tensorflow
-cPickle
+Python<br>
+Tensorflow<br>
+cPickle<br>
 
 ## Running the project:
 1. Download the dataset from <> and put it in the root folder
